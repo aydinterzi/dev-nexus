@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import "./globals.css";
 export default function RootLayout({
   children,
 }: Readonly<{
