@@ -6,6 +6,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import Image from "next/image";
 import logo from "../../public/logo.webp";
 import { ModeToggle } from "./ModeToggle";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,13 @@ export default function Header() {
             >
               Mesajlar
             </Link>
+
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
           </nav>
 
           <div className="md:hidden">

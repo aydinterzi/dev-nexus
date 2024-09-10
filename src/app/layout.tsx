@@ -2,13 +2,14 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <head />
         <body>
@@ -26,6 +27,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    </>
+    </ClerkProvider>
   );
 }
